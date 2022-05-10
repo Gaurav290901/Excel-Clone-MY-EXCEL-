@@ -14,8 +14,8 @@ for(let i =0; i < rows; i++){
             aligment: "left",
             fontFamily: "monospace",
             fontSize: "14",
-            fontColor: "000000",
-            BGcolor: "000000"  //just for indication purpose
+            fontColor: "#000000",
+            BGcolor: "#000000"  //just for indication purpose
 
         }
         sheetRow.push(cellProp);
@@ -151,7 +151,7 @@ function addListenerToAttachCellProperties(cell){
 
     let address = addressBar.value;
     let [rid , cid] = decodeRIDCIDFromAddress(address);
-    let cellProp = [rid][cid];
+    let cellProp = sheetDB[rid][cid];
     
     cell.addEventListener("click", (e) =>{
         //Apply cell properties
